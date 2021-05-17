@@ -3,7 +3,7 @@
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 #Check OS
 if [ -f "/etc/debian_version" ]; then
-  apt-get -yqq install curl cron gawk
+  apt-get -yqq install curl cron gawk mtr
 else
   echo "OS not supported";
   exit 1
