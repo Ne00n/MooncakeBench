@@ -7,7 +7,7 @@ if [[ "`pidof -x $(basename $0) -o %PPID`" ]]; then
 else
 
 virtualization=$(systemd-detect-virt);
-operatingSystem=$(cat /etc/debian_version);
+operatingSystem="Debian";
 processor=$(cat /proc/cpuinfo);
 gateway=$(ip route get 8.8.8.8  | head -n1 | cut -d " " -f3);
 memory=$(grep MemTotal /proc/meminfo | awk '{print $2;}');
