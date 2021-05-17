@@ -16,7 +16,7 @@ useradd mooncake -r -d /opt/mooncake -s /bin/false
 if [ -f "/etc/debian_version" ]; then
   curl https://raw.githubusercontent.com/Ne00n/MooncakeBench/master/scripts/debian/agent.sh --output agent.sh
 fi
-sed -i "s/token='INSERT_KEY_HERE'/key='${1}'/g" agent.sh
+sed -i "s/token='INSERT_KEY_HERE'/token='${1}'/g" agent.sh
 chown -R mooncake:mooncake /opt/mooncake/
 chmod -R 700 /opt/mooncake/
 #Install Cron
