@@ -16,6 +16,6 @@ load=$(top -bn2 -b | awk '/^%Cpu/');
 google=$(mtr 8.8.8.8 --report);
 cloudflare=$(mtr 1.1.1.1 --report);
 
-curl --connect-timeout 30 --max-time 30 -d "token=${token}&virtualization=${virtualization}&operatingSystem=${operatingSystem}&processor=${processor}&gateway=${gateway}&memory=${memory}&disk=${disk}&load=${load}&google=${google}&cloudflare=${cloudflare}&version=${version}" https://api.mooncake.local/drop/
+curl --connect-timeout 30 --max-time 30 -d "token=${token}&virtualization=${virtualization}&operatingSystem=${operatingSystem}&processor=${processor}&gateway=${gateway}&memory=${memory}&disk=${disk}&load=${load}&google=${google}&cloudflare=${cloudflare}&version=${version}" https://api.mooncakebench.net/drop/
 
 fi

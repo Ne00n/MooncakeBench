@@ -14,7 +14,7 @@ cd /opt/mooncake/
 useradd mooncake -r -d /opt/mooncake -s /bin/false
 #Fetch Agent
 if [ -f "/etc/debian_version" ]; then
-  curl https://mooncake.local/content/scripts/debian/agent.sh --output agent.sh
+  curl https://raw.githubusercontent.com/Ne00n/MooncakeBench/master/scripts/debian/agent.sh --output agent.sh
 fi
 sed -i "s/token='INSERT_KEY_HERE'/key='${1}'/g" agent.sh
 chown -R mooncake:mooncake /opt/mooncake/
